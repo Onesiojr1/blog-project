@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link";
 import { ModeToggle } from "./modeToggle";
-import { Instagram, Menu, Twitter, X } from "lucide-react";
+import { Instagram, Menu, Twitter, X, Youtube } from "lucide-react";
 import { useState } from "react";
+import { NavBarLink } from "./navBarLink";
 
 export function NavBar() {
 
@@ -18,8 +19,8 @@ export function NavBar() {
         <Link href='/' className="font-bold text-3xl">
           Onesio<span className="text-primary">Blog</span>
         </Link>
-        <Link href='/' className="font-bold text-xl hidden lg:flex">Artigos</Link>
-        <Link href='/about-us' className="font-bold text-xl hidden lg:flex">Sobre nós</Link>
+        <NavBarLink href="/" children="Artigos" />
+        <NavBarLink href="/about-us" children="Sobre nós" />
         <ModeToggle />
         <div className="lg:hidden items-center">
           <Menu onClick={() => toggleNavBar()}/>
@@ -40,6 +41,9 @@ export function NavBar() {
             </a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <Instagram className="w-6 h-6" />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer">
+              <Youtube className="w-6 h-6" />
             </a>
           </div>
         </div>
