@@ -19,8 +19,8 @@ export function NavBar() {
         <Link href='/' className="font-bold text-3xl">
           Onesio<span className="text-primary">Blog</span>
         </Link>
-        <NavBarLink href="/" children="Artigos" />
-        <NavBarLink href="/about-us" children="Sobre nós" />
+        <NavBarLink href="/" name="Artigos" />
+        <NavBarLink href="/about-us" name="Sobre nós" />
         <ModeToggle />
         <div className="lg:hidden items-center">
           <Menu onClick={() => toggleNavBar()}/>
